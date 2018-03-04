@@ -1,0 +1,46 @@
+Functional end-to-end testing of https://dog.ceo/
+
+After taking a quick look at the website, I would expect a functional test plan to focus on the 
+main functionalities of the web page. After a brief scan of the web page, I noticed that the main
+elements to take note of are the various links on the home page. Therefore my proposed test plan 
+will involve the testing of these links to ensure they are working as expected.
+
+Test Case 1: Expect the API link to take the user to the API url @ "https://dog.ceo/dog-api/"
+	- Ensure that all content is displayed
+
+Test Case 2: Expect the Math problem link to take the user to the correct url @ "https://dog.ceo/maths-problems-birch-swinnerton-dyer"
+	- Ensure that all content is displayed
+	- Within this test case we will also need to ensure that the links on this page are all working.
+	This includes: the Birch and Swinnerton-Dyer link, the rolling over in business link, as well as
+	the Kurt von Hammerstein-Equord link to all take the user to their respective urls @
+	"https://en.wikipedia.org/wiki/Birch_and_Swinnerton-Dyer_conjecture"
+	"https://dog.ceo/when-to-roll-over"
+	"https://en.wikipedia.org/wiki/Kurt_von_Hammerstein-Equord"
+
+	*side note for this page, after clicking on the "rolling over" link from this page and then clicking on the back button
+	on the "rolling over" page, the user is returned to the main home page. While this is not a bug persay, in terms of user
+	expectation one would expect to be returned to the Math problem page. This can be implemented via breadcrumbs.*
+
+Test Case 3: Expect the When to roll over link to take the user to the correct url @ "https://dog.ceo/when-to-roll-over"
+	- Ensure that all content is displayed, and that the top ten tips link is working and redirects to
+	"https://dog.ceo/top-ten-tips-for-business"
+
+Test Case 4: Expect the top ten tips link to take the user to the url @ "https://dog.ceo/top-ten-tips-for-business"
+
+Test Case 5: Expect the exterior links like the mail, linkedin, and twitter to redirect to appropriate url
+	- "https://www.linkedin.com/in/dog-ceo/"
+	- "https://twitter.com/dog__CEO"
+
+
+
+Functional testing of https://dog.ceo/dog-api/demo.php
+
+Test Case 1: Expect the page to display an image of the correct breed after requesting
+	- Whatever option the user chooses from the drop down menu to select the breed, the expected behavior is 
+	that the page will show a random image of a dog of that breed. This can be verified in a few ways: the manual
+	way involves verifying by sight that the displayed dog is indeed of the breed that was chosen. Another way is
+	to see what the link of the image is, and assuming that all images are named correctly the link should say the
+	breed in the url
+
+Test Case 2: Expect the page to display a random image of the same breed after clicking "More of this breed" button
+	- Page should be displaying the same breed as originally selected
